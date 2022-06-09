@@ -1,3 +1,4 @@
+//transpose of the matrix
 // sum of two matrices
 #include <stdio.h>
 int main()
@@ -8,7 +9,7 @@ int main()
     scanf("%d", &row);
     printf("enter the no. of column");
     scanf("%d", &col);
-    int matA[row][col], matB[row][col], matC[row][col];
+    int matA[row][col], matAT[row][col];
 
     printf("enter the elements of 1st matrix \n");
 
@@ -21,28 +22,19 @@ int main()
             scanf("%d", &matA[i][j]);
         }
     }
-
-    printf("enter the elements of 2nd matrix\n");
+    printf("\n");
     for (i = 0; i < row; i++)
     {
         for (j = 0; j < col; j++)
         {
-            scanf("%d", &matB[i][j]);
+            matAT[i][j]=matA[j][i];
+            printf("%d ",matAT[i][j]);
         }
-    }
     printf("\n");
 
-    for (i = 0; i < row; i++)
-    {
-        for (j = 0; j < col; j++)
-        {
-            matC[i][j] = matA[i][j] + matB[i][j];
-            printf("%d ", matC[i][j]);
-        }
-        printf("\n");
     }
-
     printf("\n");
+    
 
     return 0;
 }

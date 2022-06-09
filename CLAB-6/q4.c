@@ -1,3 +1,4 @@
+//difference of two matrices
 // sum of two matrices
 #include <stdio.h>
 int main()
@@ -36,7 +37,7 @@ int main()
     {
         for (j = 0; j < col; j++)
         {
-            matC[i][j] = matA[i][j] + matB[i][j];
+            matC[i][j] = matA[i][j] - matB[i][j];
             printf("%d ", matC[i][j]);
         }
         printf("\n");
