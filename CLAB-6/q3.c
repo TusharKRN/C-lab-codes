@@ -4,9 +4,9 @@ int main()
 {
     int row, col;
 
-    printf("enter the no. of rows");
+    printf("enter the no. of rows:");
     scanf("%d", &row);
-    printf("enter the no. of column");
+    printf("enter the no. of column:");
     scanf("%d", &col);
     int matA[row][col], matB[row][col], matC[row][col];
 
@@ -41,8 +41,6 @@ int main()
         }
         printf("\n");
     }
-
-    printf("\n");
 
     return 0;
 }

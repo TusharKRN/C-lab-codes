@@ -1,19 +1,20 @@
-// multiplication of two square matrices
-
+// symmetric or not
+// transpose of the matrix
+//  sum of two matrices
 #include <stdio.h>
 int main()
 {
-    int row, col;
+    int row, col, sum = 0;
 
-    printf("enter the no. of rows");
+    printf("enter the no. of rows:");
     scanf("%d", &row);
-    printf("enter the no. of column");
+    printf("enter the no. of column:");
     scanf("%d", &col);
-    int matA[row][col], matB[row][col], matC[row][col];
+    int matA[row][col], matAT[row][col];
 
     printf("enter the elements of 1st matrix \n");
 
-    int i, j, k;
+    int i, j;
 
     for (i = 0; i < row; i++)
     {
@@ -23,39 +24,19 @@ int main()
         }
     }
 
-    printf("enter the elements of 2nd matrix\n");
-    for (i = 0; i < row; i++)
-    {
-        for (j = 0; j < col; j++)
-        {
-            scanf("%d", &matB[i][j]);
-        }
-    }
-    printf("\n");
+   
 
-    for (i = 0; i < row; i++)
-    {
-        for (j = 0; j < col; j++)
-
+        for (i = 0; i < row; i++)
         {
-            int sum = 0;
-            for (k = 0; k < col; k++)
+            for (j = 0; j < col; j++)
             {
-                sum = sum + matA[i][k] * matB[k][j];
-                matC[i][j] = sum;
+                if(i==j){
+                sum = sum + matA[i][j];
             }
         }
-    }
-    for (i = 0; i < row; i++)
-    {
-        for (j = 0; j < col; j++)
-
-        {
-            printf("%d ",matC[i][j]);
         }
-        printf("\n");
-    }
-        printf("\n");
     
-    return 0;
-}
+        printf("%d", sum);
+
+        return 0;
+    }

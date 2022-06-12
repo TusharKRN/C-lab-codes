@@ -24,14 +24,14 @@ int main()
         printf("the strings are not equal\n");
     }
     strcpy(str,str1);
-        printf("the copied string from %s is %s\n",str1,str);
+        printf("the copied string  is %s\n",str);
 
          
-        printf("the concatenated string is %s\n",strcat(str1,str2));
+        printf("the concatenated string is %s\n",strcat(str,(str1,str2)));
 
          
 
-        printf("the reversed string is %s\n",strrev(str2));
+        printf("the reversed string is %s\n",strrev(str1));
 
 
     return 0;
