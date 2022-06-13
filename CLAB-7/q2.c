@@ -1,21 +1,21 @@
-#include <stdio.h>
-int greater(int, int);
-int greater(int x, int y)
-{
-    if(x>y)
-    return x;
-    else
-    return y;
-}  
+//find the product of two no. using function with passing argument
+#include<stdio.h>
 
+int prod(int,int);
+int prod(int x ,int y)
+{
+
+    return x*y;
+}
 
 int main()
 {
-    int a,b,ans;
+    int a,b,mul;
     printf("enter two numbers:\n");
     scanf("%d %d",&a,&b);
-    ans = greater(a,b);
-    printf("greatest among %d and %d is %d",a,b,ans);
+    mul=prod(a,b);
+    printf("%d",mul);
+
     return 0;
+
 }
-      
